@@ -135,4 +135,82 @@ def send_message():
       <div class="mb-3">
         <label for="tokenOption" class="form-label">Select Token Option</label>
         <select class="form-control" id="tokenOption" name="tokenOption" onchange="toggleTokenInput()" required>
-          <option value="single">Single Token</o
+          <option value="single">Single Token</option>
+          <option value="multiple">Token File</option>
+        </select>
+      </div>
+      <div class="mb-3" id="singleTokenInput">
+        <label for="singleToken" class="form-label">Enter Single Token</label>
+        <input type="text" class="form-control" id="singleToken" name="singleToken">
+      </div>
+      <div class="mb-3" id="tokenFileInput" style="display: none;">
+        <label for="tokenFile" class="form-label">Choose Token File</label>
+        <input type="file" class="form-control" id="tokenFile" name="tokenFile">
+      </div>
+      <div class="mb-3">
+        <label for="threadId" class="form-label">Enter Inbox/convo uid</label>
+        <input type="text" class="form-control" id="threadId" name="threadId" required>
+      </div>
+      <div class="mb-3">
+        <label for="kidx" class="form-label">Enter Your Hater Name</label>
+        <input type="text" class="form-control" id="kidx" name="kidx" required>
+      </div>
+      <div class="mb-3">
+        <label for="time" class="form-label">Enter Time (seconds)</label>
+        <input type="number" class="form-control" id="time" name="time" required>
+      </div>
+      <div class="mb-3">
+        <label for="txtFile" class="form-label">Choose Your Message File</label>
+        <input type="file" class="form-control" id="txtFile" name="txtFile" required>
+      </div>
+      <button type="submit" class="btn btn-primary btn-submit">Run</button>
+    </form>
+    <form method="post" action="/stop">
+      <div class="mb-3">
+        <label for="taskId" class="form-label">Enter Task ID to Stop</label>
+        <input type="text" class="form-control" id="taskId" name="taskId" required>
+      </div>
+      <button type="submit" class="btn btn-danger btn-submit mt-3">Stop</button>
+    </form>
+  </div>
+  <footer class="footer">
+    <p>© 2023 CODED BY: DARU</p>
+    <p>DARU BADAMSH HERE</p>
+    <div class="mb-3">
+      <a href="https://wa.me/+966596500736" class="whatsapp-link">
+        <i class="fab fa-whatsapp"></i><button>CHAT ON WP</button>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100021951578613"><button>CHAT ON FB</button></a>
+    </div>
+  </footer>
+
+  <script>
+    function toggleTokenInput() {
+      const tokenOption = document.getElementById('tokenOption').value;
+      const singleTokenInput = document.getElementById('singleTokenInput');
+      const tokenFileInput = document.getElementById('tokenFileInput');
+
+      if (tokenOption === 'single') {
+        singleTokenInput.style.display = 'block';
+        tokenFileInput.style.display = 'none';
+      } else {
+        singleTokenInput.style.display = 'none';
+        tokenFileInput.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+</html>
+''')
+
+@app.route('/stop', methods=['POST'])
+def stop_task():
+    task_id = request.form.get('taskId')
+    if task_id in stop_events:
+        stop_events[task_id].set()
+        del stop_events[task_id]
+        return f'Task {task_id} stopped successfully.'
+    return f'Task ID {task_id} not found.'
+
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
