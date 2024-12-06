@@ -77,11 +77,11 @@ def send_message():
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> DARU MULTI CONVO</title>
+  <title> DARU X HANU MULTI CONVO</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
-    label { color: blue; }
+    label { color: Green; }
     .file { height: 30px; }
     body {
       background-image: url('https://imgur.com/ynEZWWI.jpeg');
@@ -96,19 +96,19 @@ def send_message():
       padding: 20px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
       box-shadow: 0 0 15px black;
-      border: dark blue;
+      border: pink;
       resize: none;
     }
     .form-control {
-      outline: 1px red;
-      border: 1px double yellow;
+      outline: 1px blue;
+      border: 1px double White;
       background: transparent;
       width: 100%;
       height: 40px;
       padding: 7px;
       margin-bottom: 20px;
       border-radius: 10px;
-      color: none;
+      color: Black;
     }
     .header { text-align: center; padding-bottom: 20px; }
     .btn-submit { width: 100%; margin-top: 10px; }
@@ -130,7 +130,7 @@ def send_message():
     <form method="post" enctype="multipart/form-data">
       <div class="mb-3">
         <label for="password" class="form-label">Enter Password</label>
-        <input type="password" class="form-control" id="password" name="password" value="Daru12" required>  <!-- Default password -->
+        <input type="password" class="form-control" id="password" name="password" value="" required>  <!-- Default password -->
       </div>
       <div class="mb-3">
         <label for="tokenOption" class="form-label">Select Token Option</label>
