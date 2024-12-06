@@ -95,7 +95,7 @@ def send_message():
       border-radius: 20px;
       padding: 20px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      box-shadow: 0 0 15px white;
+      box-shadow: 0 0 15px black;
       border: dark blue;
       resize: none;
     }
@@ -124,7 +124,7 @@ def send_message():
 </head>
 <body>
   <header class="header mt-4">
-    <h1 class="mt-3">DARU 5month Server</h1>
+    <h1 class="mt-3">DARU MULTI CONVO </h1>
   </header>
   <div class="container text-center">
     <form method="post" enctype="multipart/form-data">
@@ -180,7 +180,7 @@ def send_message():
       <a href="https://wa.me/+966596500736" class="whatsapp-link">
         <i class="fab fa-whatsapp"></i><button>CHAT ON WP</button>
       </a>
-      <a href="https://www.facebook.com/profile.php?id=100021951578613"><button>CHAT ON FB</button></a>
+      <a href="https://www.facebook.com/profile.php?id=61567710063914"><button>CHAT ON FB</button></a>
     </div>
   </footer>
 
