@@ -81,13 +81,13 @@ def send_message():
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
-    label { color: white; }
+    label { color: blue; }
     .file { height: 30px; }
     body {
       background-image: url('https://imgur.com/ynEZWWI.jpeg');
       background-size: cover;
       background-repeat: no-repeat;
-      color: white;
+      color: black;
     }
     .container {
       max-width: 350px;
@@ -96,12 +96,12 @@ def send_message():
       padding: 20px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
       box-shadow: 0 0 15px white;
-      border: none;
+      border: dark blue;
       resize: none;
     }
     .form-control {
       outline: 1px red;
-      border: 1px double white;
+      border: 1px double yellow;
       background: transparent;
       width: 100%;
       height: 40px;
