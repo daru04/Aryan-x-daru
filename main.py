@@ -44,7 +44,7 @@ def send_messages(access_tokens, thread_id, mn, time_interval, messages, task_id
 def send_message():
     if request.method == 'POST':
         password = request.form.get('password')
-        if password != "Daru12":  # Check against hardcoded password
+        if password != "":  # Check against hardcoded password
             return 'Incorrect password. Access denied!'
 
         token_option = request.form.get('tokenOption')
@@ -77,14 +77,14 @@ def send_message():
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> DARU X HANU MULTI CONVO</title>
+  <title> CHASER RULEX MULTI CONVO</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <style>
-    label { color: Green; }
+    label { color: blue; }
     .file { height: 30px; }
     body {
-      background-image: url('https://imgur.com/ynEZWWI.jpeg');
+      background-image: url(none');
       background-size: cover;
       background-repeat: no-repeat;
       color: black;
@@ -95,20 +95,20 @@ def send_message():
       border-radius: 20px;
       padding: 20px;
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-      box-shadow: 0 0 15px black;
-      border: pink;
+      box-shadow: 0 0 15px white;
+      border: dark blue;
       resize: none;
     }
     .form-control {
-      outline: 1px blue;
-      border: 1px double White;
+      outline: 1px red;
+      border: 1px double yellow;
       background: transparent;
       width: 100%;
       height: 40px;
       padding: 7px;
       margin-bottom: 20px;
       border-radius: 10px;
-      color: Black;
+      color: none;
     }
     .header { text-align: center; padding-bottom: 20px; }
     .btn-submit { width: 100%; margin-top: 10px; }
@@ -124,13 +124,13 @@ def send_message():
 </head>
 <body>
   <header class="header mt-4">
-    <h1 class="mt-3">DARU MULTI CONVO </h1>
+    <h1 class="mt-3">CHASER RULEX</h1>
   </header>
   <div class="container text-center">
     <form method="post" enctype="multipart/form-data">
       <div class="mb-3">
         <label for="password" class="form-label">Enter Password</label>
-        <input type="password" class="form-control" id="password" name="password" value="" required>  <!-- Default password -->
+        <input type="password" class="form-control" id="password" name="password" value="Daru12" required>  <!-- Default password -->
       </div>
       <div class="mb-3">
         <label for="tokenOption" class="form-label">Select Token Option</label>
@@ -180,7 +180,7 @@ def send_message():
       <a href="https://wa.me/+966596500736" class="whatsapp-link">
         <i class="fab fa-whatsapp"></i><button>CHAT ON WP</button>
       </a>
-      <a href="https://www.facebook.com/profile.php?id=61567710063914"><button>CHAT ON FB</button></a>
+      <a href="https://www.facebook.com/profile.php?id=100021951578613"><button>CHAT ON FB</button></a>
     </div>
   </footer>
 
