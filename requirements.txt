@@ -1,4 +1,2 @@
-Aryan-x-daru.py
 Flask
 requests
-daru.py
